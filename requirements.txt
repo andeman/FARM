@@ -19,7 +19,6 @@ seqeval
 mlflow
 # huggingface repository
 transformers
-
 huggingface_hub
 #sentence transformers
 sentence-transformers

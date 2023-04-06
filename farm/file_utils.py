@@ -23,7 +23,8 @@ import requests
 from botocore.exceptions import ClientError
 from dotmap import DotMap
 from tqdm import tqdm
-from transformers.file_utils import cached_path
+from transformers.utils.hub import cached_file
+
 
 try:
     from torch.hub import _get_torch_home
@@ -264,7 +265,7 @@ def load_from_cache(pretrained_model_name_or_path, s3_dict, **kwargs):
 
     s3_file = s3_dict[pretrained_model_name_or_path]
     try:
-        resolved_file = cached_path(
+        resolved_file = cached_file(
                         s3_file,
                         cache_dir=cache_dir,
                         force_download=force_download,

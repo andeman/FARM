@@ -38,7 +38,7 @@ def question_answering_crossvalidation():
     ##########################
     save_per_fold_results = False # unsupported for now
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
 
     lang_model = "deepset/roberta-base-squad2"
     do_lower_case = False

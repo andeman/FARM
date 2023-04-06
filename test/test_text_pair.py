@@ -24,7 +24,7 @@ def test_text_pair_classification(caplog=None):
     ########## Settings ######
     ##########################
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
     n_epochs = 1
     batch_size = 5
     evaluate_every = 2
@@ -107,7 +107,7 @@ def test_text_pair_regression(caplog=None):
     ########## Settings ######
     ##########################
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
     n_epochs = 1
     batch_size = 5
     evaluate_every = 2

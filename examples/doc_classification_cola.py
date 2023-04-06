@@ -26,7 +26,7 @@ def doc_classification_cola():
     ########## Settings
     ##########################
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
     n_epochs = 5
     batch_size = 100
     evaluate_every = 20

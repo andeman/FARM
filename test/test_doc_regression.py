@@ -23,7 +23,7 @@ def test_doc_regression(data_dir_path, text_column_name, caplog=None):
         caplog.set_level(logging.CRITICAL)
 
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=False)
+    device, n_gpu = initialize_device_settings(use_gpu=False)
     n_epochs = 1
     batch_size = 1
     evaluate_every = 2

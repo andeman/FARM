@@ -29,7 +29,7 @@ def lm_finetuning():
     ##########################
     ########## Settings
     ##########################
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
     n_epochs = 1
     batch_size = 32
     evaluate_every = 1000

@@ -69,12 +69,21 @@ def calc_chunksize(num_dicts, min_chunksize=4, max_chunksize=2000, max_processes
     return multiprocessing_chunk_size, num_processes
 
 
-def initialize_device_settings(use_cuda, local_rank=-1, use_amp=None):
-    if not use_cuda:
+def initialize_device_settings(use_gpu, local_rank=-1, use_amp=None):
+    def choose_torch_device():
+        if torch.cuda.is_available():
+            return torch.device("cuda")
+        elif torch.backends.mps.is_available():
+            return torch.device("mps")
+        else:
+            return torch.device("cpu")
+
+    if not use_gpu:
         device = torch.device("cpu")
         n_gpu = 0
     elif local_rank == -1:
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        device = choose_torch_device()
+
         if not torch.cuda.is_available():
             n_gpu = 0
         else:

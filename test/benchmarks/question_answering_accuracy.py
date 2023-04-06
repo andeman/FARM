@@ -39,7 +39,7 @@ def test_evaluation():
     data_dir = Path("testsave/data/squad20")
     evaluation_filename = "dev-v2.0.json"
 
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
 
     # loading models and evals
     model = AdaptiveModel.convert_from_transformers(lang_model, device=device, task_type="question_answering")
@@ -181,7 +181,7 @@ def train_evaluation_single(seed=42):
     ########## Settings
     ##########################
     set_all_seeds(seed=seed)
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
     # GPU utilization on 4x V100
     # 40*4, 14.3/16GB on master, 12.6/16 on others
     batch_size = 40*n_gpu_factor

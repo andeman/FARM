@@ -52,7 +52,7 @@ def train_from_scratch(args):
 
     set_all_seeds(seed=39)
 
-    device, n_gpu = initialize_device_settings(use_cuda=True, local_rank=args["local_rank"], use_amp=use_amp)
+    device, n_gpu = initialize_device_settings(use_gpu=True, local_rank=args["local_rank"], use_amp=use_amp)
     effective_batch_size = int(args["per_gpu_batch_size"]) * int(args["gradient_accumulation_steps"]) * torch.distributed.get_world_size()
 
     logging.info(

@@ -119,7 +119,7 @@ class Inferencer:
             self.benchmarker = Benchmarker()
 
         # Init device and distributed settings
-        device, n_gpu = initialize_device_settings(use_cuda=gpu, local_rank=-1, use_amp=None)
+        device, n_gpu = initialize_device_settings(use_gpu=gpu, local_rank=-1, use_amp=None)
 
         self.processor = processor
         self.model = model
@@ -245,7 +245,7 @@ class Inferencer:
         if tokenizer_args is None:
             tokenizer_args = {}
 
-        device, n_gpu = initialize_device_settings(use_cuda=gpu, local_rank=-1, use_amp=None)
+        device, n_gpu = initialize_device_settings(use_gpu=gpu, local_rank=-1, use_amp=None)
         name = os.path.basename(model_name_or_path)
 
         # a) either from local dir

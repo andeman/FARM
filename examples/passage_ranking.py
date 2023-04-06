@@ -28,7 +28,7 @@ def text_pair_classification():
     ########## Settings
     ##########################
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
     n_epochs = 2
     batch_size = 64
     evaluate_every = 500

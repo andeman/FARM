@@ -18,7 +18,7 @@ def test_prediction_head_load_save_class_weights(tmp_path, caplog=None):
         caplog.set_level(logging.CRITICAL)
 
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=False)
+    device, n_gpu = initialize_device_settings(use_gpu=False)
     batch_size = 1
     lang_model = "bert-base-german-cased"
     data_dir_path = "samples/doc_class"

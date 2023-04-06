@@ -25,7 +25,7 @@ def test_s3e_fit():
 
     # Fit S3E on a corpus
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=use_gpu, use_amp=False)
+    device, n_gpu = initialize_device_settings(use_gpu=use_gpu, use_amp=False)
 
     # Create a InferenceProcessor
     tokenizer = Tokenizer.load(pretrained_model_name_or_path=language_model, do_lower_case=do_lower_case)

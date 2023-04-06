@@ -27,7 +27,7 @@ def doc_classification_multilabel_roberta():
     ########## Settings
     ##########################
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=False)
+    device, n_gpu = initialize_device_settings(use_gpu=False)
     n_epochs = 1
     batch_size = 32
 

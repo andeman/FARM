@@ -10,7 +10,7 @@ def evaluate_classification():
     ##########################
     ########## Settings
     ##########################
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
     lang_model = "deepset/bert-base-german-cased-sentiment-Germeval17"
     do_lower_case = False
     batch_size = 100
@@ -68,7 +68,7 @@ def evaluate_question_answering():
     ##########################
     ########## Settings
     ##########################
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
     lang_model = "deepset/roberta-base-squad2"
     do_lower_case = True
 

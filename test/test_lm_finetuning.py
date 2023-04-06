@@ -19,7 +19,7 @@ def test_lm_finetuning(caplog):
     caplog.set_level(logging.CRITICAL)
 
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=False)
+    device, n_gpu = initialize_device_settings(use_gpu=False)
     n_epochs = 1
     batch_size = 1
     evaluate_every = 2
@@ -102,7 +102,7 @@ def test_lm_finetuning_no_next_sentence(caplog):
     caplog.set_level(logging.CRITICAL)
 
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=False)
+    device, n_gpu = initialize_device_settings(use_gpu=False)
     n_epochs = 1
     batch_size = 1
     evaluate_every = 2
@@ -185,7 +185,7 @@ def test_lm_finetuning_custom_vocab(caplog):
     caplog.set_level(logging.CRITICAL)
 
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=False)
+    device, n_gpu = initialize_device_settings(use_gpu=False)
     n_epochs = 1
     batch_size = 1
     evaluate_every = 2

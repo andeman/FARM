@@ -30,7 +30,7 @@ logger = logging.getLogger(__name__)
 def fit(language_model, corpus_path, save_dir, do_lower_case, batch_size=4, use_gpu=False):
     # Fit S3E on a corpus
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=use_gpu, use_amp=False)
+    device, n_gpu = initialize_device_settings(use_gpu=use_gpu, use_amp=False)
 
     # Create a InferenceProcessor
     tokenizer = Tokenizer.load(pretrained_model_name_or_path=language_model, do_lower_case=do_lower_case)

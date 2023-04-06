@@ -24,7 +24,7 @@ def test_dpr_modules(caplog=None):
         caplog.set_level(logging.CRITICAL)
 
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
 
     # 1.Create question and passage tokenizers
     query_tokenizer = Tokenizer.load(pretrained_model_name_or_path="facebook/dpr-question_encoder-single-nq-base",
@@ -700,7 +700,7 @@ def test_dpr_training():
 
 
 
-    device, n_gpu = initialize_device_settings(use_cuda=False)
+    device, n_gpu = initialize_device_settings(use_gpu=False)
 
     query_tokenizer = Tokenizer.load(pretrained_model_name_or_path=question_lang_model,
                                      do_lower_case=do_lower_case, use_fast=use_fast)

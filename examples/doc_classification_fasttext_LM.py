@@ -36,7 +36,7 @@ def doc_classifcation():
     fasttext_model = "fasttext-german-uncased"
     do_lower_case = True
     max_features = 10_000 # maximum number of unique words we will transform
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
 
 
     # 1. To make Fasttext work within FARM and with advanced aggregation strategies, we need a fixed vocabulary and associated Wordembeddings

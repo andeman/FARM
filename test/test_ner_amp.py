@@ -20,7 +20,7 @@ def test_ner_amp(caplog):
         caplog.set_level(logging.CRITICAL)
 
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
     n_epochs = 1
     batch_size = 2
     evaluate_every = 1

@@ -63,7 +63,7 @@ def dense_passage_retrieval():
 
     # For multi GPU Training via DDP we need to get the local rank
     args = parse_arguments()
-    device, n_gpu = initialize_device_settings(use_cuda=True, local_rank=args.local_rank)
+    device, n_gpu = initialize_device_settings(use_gpu=True, local_rank=args.local_rank)
 
     # 1.Create question and passage tokenizers
     query_tokenizer = Tokenizer.load(pretrained_model_name_or_path=question_lang_model,

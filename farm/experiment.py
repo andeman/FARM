@@ -46,7 +46,7 @@ def run_experiment(args):
 
     # Init device and distributed settings
     device, n_gpu = initialize_device_settings(
-        use_cuda=args.general.cuda,
+        use_gpu=args.general.cuda,
         local_rank=args.general.local_rank,
         use_amp=args.general.use_amp,
     )

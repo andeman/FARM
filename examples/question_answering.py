@@ -30,7 +30,7 @@ def question_answering():
     ########## Settings
     ##########################
     set_all_seeds(seed=42)
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
     batch_size = 24
     n_epochs = 2
     evaluate_every = 2000

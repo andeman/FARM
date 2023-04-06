@@ -36,7 +36,7 @@ def doc_classifcation():
     #lang_model = "glove-german-uncased"
     do_lower_case = True
 
-    device, n_gpu = initialize_device_settings(use_cuda=True)
+    device, n_gpu = initialize_device_settings(use_gpu=True)
 
     # 1.Create a tokenizer
     tokenizer = Tokenizer.load(pretrained_model_name_or_path=lang_model, do_lower_case=do_lower_case)

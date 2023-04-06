@@ -25,7 +25,7 @@ def doc_classification(args):
     save_dir = Path("/opt/ml/model")
     use_amp = None
 
-    device, n_gpu = initialize_device_settings(use_cuda=True, use_amp=use_amp)
+    device, n_gpu = initialize_device_settings(use_gpu=True, use_amp=use_amp)
 
     # 1.Create a tokenizer
     tokenizer = Tokenizer.load(pretrained_model_name_or_path=args.base_lm_model, do_lower_case=False)

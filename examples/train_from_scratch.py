@@ -43,7 +43,7 @@ def train_from_scratch():
         ml_logger.init_experiment(experiment_name="train_from_scratch", run_name="run")
 
     set_all_seeds(seed=39)
-    device, n_gpu = initialize_device_settings(use_cuda=True, local_rank=args.local_rank, use_amp=use_amp)
+    device, n_gpu = initialize_device_settings(use_gpu=True, local_rank=args.local_rank, use_amp=use_amp)
 
     save_dir = Path("saved_models/train_from_scratch")
     data_dir = Path("data/test")

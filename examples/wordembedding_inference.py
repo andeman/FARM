@@ -26,7 +26,7 @@ def embedding_extraction():
     lang_model = "glove-german-uncased" #only glove or word2vec or converted fasttext (fixed vocab) embeddings supported
     do_lower_case = True
     use_amp = None
-    device, n_gpu = initialize_device_settings(use_cuda=True, use_amp=use_amp)
+    device, n_gpu = initialize_device_settings(use_gpu=True, use_amp=use_amp)
 
     # Create a InferenceProcessor
     tokenizer = Tokenizer.load(pretrained_model_name_or_path=lang_model, do_lower_case=do_lower_case)
